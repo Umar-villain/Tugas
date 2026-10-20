@@ -1,0 +1,8 @@
+SELECT k.nama_kategori, 
+COUNT(p.kode_barang) AS jumlah_produk 
+FROM kategori_produk k
+INNER JOIN produk p ON k.kode_kategori = p.kode_kategori 
+GROUP BY k.kode_kategori, k.nama_kategori;
+
+k.nama_kategori
+​Mengambil kolom nama_kategori dari tabel kategori_produk (yang diberi alias k) agar kita tahu kategori barang apa yang sedang dihitung.
